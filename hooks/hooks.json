@@ -1,0 +1,14 @@
+{
+  "description": "Holds back a message that would re-send a large conversation whose prompt cache has expired, writes a handoff when you type `xray handoff`, loads that handoff into the next session in the same folder, and notes when a conversation has grown large and when its cache runs out.",
+  "hooks": {
+    "UserPromptSubmit": [
+      { "hooks": [ { "type": "command", "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/ccxray.py\" hook-prompt || python \"${CLAUDE_PLUGIN_ROOT}/ccxray.py\" hook-prompt", "timeout": 15 } ] }
+    ],
+    "Stop": [
+      { "hooks": [ { "type": "command", "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/ccxray.py\" hook-stop || python \"${CLAUDE_PLUGIN_ROOT}/ccxray.py\" hook-stop", "timeout": 15 } ] }
+    ],
+    "SessionStart": [
+      { "matcher": "startup|clear", "hooks": [ { "type": "command", "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/ccxray.py\" hook-start || python \"${CLAUDE_PLUGIN_ROOT}/ccxray.py\" hook-start", "timeout": 15 } ] }
+    ]
+  }
+}

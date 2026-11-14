@@ -1,0 +1,14 @@
+{
+  "name": "ccxray",
+  "description": "ccxray: see where your Claude Code usage goes and stop paying for expired prompt caches.",
+  "owner": {
+    "name": "abhiyarecord-hue"
+  },
+  "plugins": [
+    {
+      "name": "ccxray",
+      "source": "./",
+      "description": "See where your Claude Code usage goes and stop paying for expired prompt caches."
+    }
+  ]
+}

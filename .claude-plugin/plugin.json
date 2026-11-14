@@ -1,0 +1,10 @@
+{
+  "name": "ccxray",
+  "version": "0.2.0",
+  "description": "Shows where your Claude Code usage really goes, from your own local logs, and stops the most expensive habit: sending a message into a large conversation whose prompt cache has expired. Warns once before such a message, writes a free handoff so you can continue in a new session, and reminds you to /compact while the cache is still warm.",
+  "author": { "name": "abhiyarecord-hue" },
+  "homepage": "https://github.com/abhiyarecord-hue/ccxray",
+  "repository": "https://github.com/abhiyarecord-hue/ccxray",
+  "license": "MIT",
+  "keywords": ["usage", "cost", "limits", "prompt-cache", "tokens", "hooks", "handoff", "compact"]
+}
