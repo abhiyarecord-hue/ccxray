@@ -14,13 +14,19 @@ One Python file, standard library only. Nothing is sent anywhere.
 
 ## Install
 
-As a plugin:
+As a plugin, inside Claude Code:
 
 ```
-/plugin install ccxray --marketplace abhiyarecord-hue/ccxray
+/plugin marketplace add abhiyarecord-hue/ccxray
 ```
 
-Or by hand:
+```
+/plugin install ccxray@ccxray
+```
+
+Or from a terminal: `claude plugin marketplace add abhiyarecord-hue/ccxray` then `claude plugin install ccxray@ccxray`. Start a new session afterwards so the hooks load.
+
+Or by hand (pick one way, not both, or every hook runs twice):
 
 ```bash
 git clone https://github.com/abhiyarecord-hue/ccxray.git
